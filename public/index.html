@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ürün Ekle</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+<body class="bg-gray-100">
+  <input type="text" id="urunAdiArama" placeholder="Ürün Adı ile Ara">
+  
+  <div class="container mx-auto mt-8 p-4 bg-white rounded-lg shadow-md">
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="w-full md:w-1/2">
+
+ 
+  <form id="urunForm" class="max-w-md mx-auto">
+    <h1 class="text-2xl font-bold mb-4" >Ürün Ekleme Formu</h1>
+      
+    <div class="mb-4">
+      <label for="barkod" class="block text-gray-700 font-bold mb-2">Barkod:</label>
+      <input type="text" id="barkod" name="barkod" required
+        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+    </div>
+  
+    <div class="mb-4">
+      <label for="urun_adi" class="block text-gray-700 font-bold mb-2">Ürün Adı:</label>
+      <input type="text" id="urun_adi" name="urun_adi" required
+        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+    </div>
+  
+    <div class="mb-4">
+      <label for="fiyat" class="block text-gray-700 font-bold mb-2">Fiyat:</label>
+      <input type="number" id="fiyat" name="fiyat" required
+        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+    </div>
+  
+    <div class="mb-4">
+      <label for="vergi_orani" class="block text-gray-700 font-bold mb-2">KDV Oranı (%):</label>
+      <select id="vergi_orani" name="vergi_orani" required
+        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+        <option value="1">1</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+  
+    <div class="mb-6">
+      <label for="tedarikci" class="block text-gray-700 font-bold mb-2">Tedarikçi:</label>
+      <select id="tedarikci" name="tedarikci" required
+        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+        <option value="Ataorganik">Ataorganik</option>
+        <option value="BRC">BRC</option>
+        <option value="IL GIDA">İl Gıda</option>
+        <option value="Ekokimya">Ekokimya</option>
+        <option value="Devorganik">Devorganik</option>
+        <option value="Sunrino">Sunrino</option>
+        <option value="Halit Ceylan">Halit Ceylan</option>
+      </select>
+    </div>
+  
+    <button type="submit"
+      class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300">
+      Ürün Ekle
+    </button>
+  </form>
+</div>
+<div class="w-full md:w-1/2">
+  
+
+  <h2>Ürün Listesi</h2>
+  <table id="urunTablosu" class="table-auto w-full border-collapse border border-gray-200 divide-y divide-gray-200 shadow-md">
+    <thead>
+      <tr>
+        <th class="px-4 py-2 w-1/2 text-left font-bold text-gray-700">Barkod</th>
+        <th class="px-4 py-2 w-1/2 text-left font-bold text-gray-700">Ürün Adı</th>
+        <th class="px-4 py-2 text-left font-bold text-gray-700">Fiyat</th>
+        <th class="px-4 py-2 text-left font-bold text-gray-700">KDV Oranı</th>
+        <th class="px-4 py-2 text-left font-bold text-gray-700">Toplam Fiyat</th>
+        <th class="px-4 py-2 text-left font-bold text-gray-700">Tedarikçi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-gray-200 hover:bg-gray-50">
+        <td class="px-4 py-2"></td>
+        <td class="px-4 py-2"></td>
+        <td class="px-4 py-2"></td>
+        <td class="px-4 py-2"></td>
+        <td class="px-4 py-2"></td>
+        <td class="px-4 py-2"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+
+  <script src="js/script.js"></script>
+ 
+</body>
+</html>

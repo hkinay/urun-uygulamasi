@@ -1,0 +1,24 @@
+/* CSS Grid ile örnek */
+#urunListesi {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 sütun */
+    grid-gap: 10px;
+  }
+  
+  .urunElemani {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Flexbox ile örnek */
+  #urunListesi {
+    display: flex;
+    flex-wrap: wrap; /* Gerekirse satırlara sığdır */
+    gap: 10px;
+  }
+  
+  .urunElemani {
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex: 1 0 200px; /* Minimum genişlik ve büyüme */
+  }
